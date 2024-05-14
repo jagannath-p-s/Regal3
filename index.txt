@@ -1,0 +1,142 @@
+karashi
+
+This is a Furniture HTML template made by mde3-mabiorduom
+
+#---------- HEADER ----------#
+
+karashi
+
+Collection
+Company
+Store
+Contact Us
+
+Close icon
+<i class='bx bx-x'></i>
+
+Grid icon
+<i class='bx bx-grid-alt' ></i>
+
+
+#---------- HERO ----------#
+
+The best collection of chairs is here
+
+Find various types of quality chairs, and international standards. Only with this
+one website you can see and buy quality chairs. Immediately order the best seat of
+your choice before the stock runs out!
+
+
+#---------- COLLECTION ----------#
+
+Why should <br> you choose our product?
+
+Best Quality
+We always prioritize customer satisfaction over everything.
+
+International standard
+We already have international standards, and we often import abroad.
+
+Long warranty
+All the products we provide have a long warranty of up to 2-3 years.
+
+
+#---------- COMPANY ----------#
+
+Armless chair
+600 stock availabe
+
+
+#---------- STORE ----------#
+
+New Products
+
+This beautifully crafted piece of furniture will add a touch of <br>
+elegance and sophistication to any room.
+
+Type
+Armless chair
+Availability
+61 stock
+
+Type
+Armchair
+Availability
+75 stock
+
+Type
+Armless chair
+Availability
+41 stock
+
+Type
+Wooden chair
+Availability
+61 stock
+
+
+#---------- CONTACT ----------#
+
+What our happy <br> customers say
+
+Get to know what people say about our products.
+
+I recently purchased this product and have been extremely impressed with its quality and performance.
+It is well-made, reliable, and has exceeded my expectations in every way. The customer service provided
+by the company was also excellent, and I would highly recommend this product to others.
+Sarah Johnson
+Customer
+
+I recently purchased this product and have been extremely impressed with its quality and performance.
+It is well-made, reliable, and has exceeded my expectations in every way. The customer service provided
+by the company was also excellent, and I would highly recommend this product to others.
+Michael Williams
+Customer
+
+I recently purchased this product and have been very happy with it.
+The quality is excellent and it has exceeded my expectations in terms of durability and performance.
+The customer service provided by the company was also outstanding, and I would definitely recommend this
+product to others.
+David Lee
+Customer
+
+I recently purchased this product and was blown away by its quality and effectiveness. It is well-designed,
+reliable, and has exceeded my expectations in every way. The customer service provided by the company was also
+outstanding, and I would highly recommend this product to others.
+Jessica Anderson
+Customer
+
+I recently purchased this product and have been extremely impressed with its quality and performance.
+It is well-made, reliable, and has exceeded my expectations in every way. The customer service provided by the
+company was also excellent, and I would highly recommend this product to others.
+Sarah Johnson
+Customer
+
+
+#---------- FOOTER ----------#
+
+Quick Links
+Home
+Collection
+Company
+Store
+
+Services
+Download
+Agents
+Careers
+Contact
+
+Social Media
+Facebook
+Instagram
+Twitter
+Whatsapp
+
+Information
+Company
+Terms and Conditions
+Customer Support
+FAQ
+
+Copyright 2022 - Mabior

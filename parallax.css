@@ -1,0 +1,82 @@
+.home {
+    transition: background-image 2s ease, opacity 2s ease; /* Smooth transition for background image change and opacity */
+    opacity: 1; /* Initially set opacity to 1 */
+  }
+  
+  
+
+.collection-list.grid {
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 1s ease-out, opacity 1s ease-in-out;
+}
+
+.collection-list.grid.active {
+    opacity: 1;
+    transform: translateY(-40px); /* Adjust the distance of the parallax effect */
+}
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-on-scroll.show {
+    opacity: 1;
+}
+
+.filters {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scrollbar-width: auto; /* Set minimal scrollbar width */
+    scrollbar-color: rgba(255, 255, 255, 0) transparent; /* Hide scrollbar except when hovered */
+}
+
+
+.filter-options.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style scrollbar */
+.button-wrapper::-webkit-scrollbar {
+    width: 6px; /* Adjust scrollbar width */
+}
+
+.button-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Change scrollbar thumb color */
+    border-radius: 3px;
+}
+
+.button-wrapper:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Change scrollbar thumb color on hover */
+}
+
+.hallmark-title {
+    font-size: 40px;
+    opacity: 0; /* Initially hide the element */
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 1s ease forwards; /* Use forwards to keep the element visible after animation */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
