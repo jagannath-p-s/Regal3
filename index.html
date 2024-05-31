@@ -56,7 +56,180 @@ parallax -->
 }
 
 </style>
+<style>
 
+.carousel-container {
+  border-radius: 0px;
+  overflow: hidden;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 0 30px -20px #223344;
+  margin: auto;
+  z-index: 0;
+  top: -60px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  display: block;
+  width: 100%;
+}
+
+/* image gradient overlay [optional] */
+/*  .mySlides::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+    background-image: linear-gradient(-45deg, rgba(110, 0, 255, .1), rgba(70, 0, 255, .2));
+} */
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 8px 8px 0;
+  background: rgba(173, 216, 230, 0.1);
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: rgba(10, 10, 20, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.number {
+  color: #f2f2f2;
+  font-size: 16px;
+  background-color: rgba(173, 216, 230, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  visibility: hidden;
+}
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  cursor: pointer;
+  height: 1px;
+  width: 1px;
+  margin: 0 4px;
+  background-color: rgba(173, 216, 230, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.active,
+.dots:hover {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+
+/* transition animation */
+.animate {
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 1s;
+  animation-name: animate;
+  animation-duration: 2s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1.1) rotateY(10deg);
+  }
+  to {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+
+.slideshow-container12 {
+    position: relative;
+    margin: auto;
+}
+
+.slide12 {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.prev12, .next12 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev12 {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next12 {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.fade12 {
+    animation-name: fade12;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade12 {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+
+</style>
 
 </head>
 <body>
@@ -66,10 +239,10 @@ parallax -->
             <a href="#home" style="font-family: 'Poppins', sans-serif;  letter-spacing: -0.5px;" class="nav-logo"><img src="./logo.png" class="nav-logo-img">Regal</a>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./products.html" class="nav-link" id="company">Products</a></li>
-                    <li class="nav-item"><a href="./index.html/" class="nav-link">About us </a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Testimonials </a></li>
+                    <li class="nav-item"><a href="#aboutus" class="nav-link">About us </a></li>
+                    <li class="nav-item"><a href="#testimony" class="nav-link">Testimonials </a></li>
                 </ul>
                 <div class="nav-close" id="nav-close"><i class="bx bx-x"></i></div>
                 <div class="nav-close movdown" id="nav-close"><i class="bx "></i></div>
@@ -231,11 +404,17 @@ parallax -->
                     </div>
                 </li>
             </ul>
-        </section>
+            <div class="title-wrapper section container">
+             
+                
 
-        <!--=============== CONTACT ===============-->
-        <div id="Testimonials" class="contact-container swiper" style=" margin: 50px;">
-            <div class="swiper-wrapper">
+        </section>
+       
+    
+           
+        <!--=============== testimonials ===============-->
+        <div id="testimony" class="contact-container swiper" style=" margin: 50px; ">
+            <div class="swiper-wrapper" >
                 <article class="contact-card swiper-slide fade-in-on-scroll">
                     <i class='bx bxs-quote-left contact-theme'></i>
                     <p class="contact-message">I recently purchased furniture from Regal Industries and I must say, I'm thoroughly impressed. The quality and craftsmanship are top-notch, surpassing my expectations. Their pricing is also unbeatable, making them the best choice for furniture in Kerala. The customer service experience was exceptional, making the entire process smooth and hassle-free. I highly recommend Regal Industries to anyone looking for quality furniture.</p>
@@ -269,6 +448,84 @@ parallax -->
         
     </main>
 
+    <!-- .................................................... -->
+  <div style="max-width: 800px; align-items: center; margin: auto;" id="aboutus">
+    <div style="text-align: center;">
+        <h1 style="font-size: 30px;" class="store-title">About Us</h1>
+    </div>
+    
+    <div class="mySlides animate">
+                
+        <img src="./hisimages/his1.jpg" alt="slide" />
+        <div class="number">1 / 5</div>
+        
+      </div>
+    
+      <div class="mySlides animate">
+        <img src="./hisimages/his2.jpg" alt="slide" />
+        <div class="number">2 / 5</div>
+       
+      </div>
+    
+      <div class="mySlides animate">
+        <img src="./hisimages/his6.jpg" alt="slide" />
+        <div class="number">3 / 5</div>
+       
+      </div>
+    
+      <div class="mySlides animate">
+        <img src="hisimages/his7.jpg" alt="slide" />
+        <div class="number">4 / 5</div>
+        
+      </div>
+    
+      <div class="mySlides animate">
+        <img src="./hisimages/his4.jpg" alt="slide" />
+        <div class="number">5 / 5</div>
+       
+      </div>
+    
+      <!-- Next and previous buttons -->
+     
+      
+    
+      <!-- The dots/circles -->
+      <div class="dots-container">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+        <span class="dots" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+                  </div>
+                  
+                  
+                  <div class="slideshow-container12" style="max-width: 800px; align-items: center; margin: auto;">
+                      <div class="slide12 fade12">
+                          <div class="text-overlay12 store-desc12" style="text-align: left; padding: 20px;">
+                              Established in 2006 by Mr. Ravindran in Changaramkulam, Kerala, Regal Industries started its humble journey with a commitment to delivering high-quality steel products at competitive prices.
+                          </div>
+                      </div>
+                      <div class="slide12 fade12">
+                          <div class="text-overlay12 store-desc12" style="text-align: left; padding: 20px;">
+                              In 2014, the company embarked on a significant transformation, relocating to Kappur in the Palakkad district. This move marked a new phase of expansion and ambition, further highlighted by an inauguration event attended by MLA VT Balram.
+                          </div>
+                      </div>
+                      <div class="slide12 fade12">
+                          <div class="text-overlay12 store-desc12" style="text-align: left; padding: 20px;">
+                              Today, under the leadership of Mr. Vishnu, Regal Steel Industries offers an extensive range of over 100 products, specializing in powder-coated items known for their durability and quality. The company provides a variety of furniture for auditoriums, banks, and educational institutions, fulfilling bulk orders throughout Kerala.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  
+                  
+                      </div>
+                  </div>
+
+              </div>
+  </div>
     <!--=============== FOOTER ===============-->
     <footer id="footer" class="footer section">
         <div class="footer-container container grid">
@@ -277,28 +534,29 @@ parallax -->
                 <div class="footer-data">
                     <h3 class="footer-subtitle">Quick Links</h3>
                     <ul>         
-                        <li class="footer-item"><a href="index.html" class="footer-link">Home</a></li>
-                        <li class="footer-item"><a href="#collection" class="footer-link">Products </a></li>
-                        <li class="footer-item"><a href="#company" class="footer-link">About</a></li>
-                        <li class="footer-item"><a href="#store" class="footer-link">Contact</a></li>
+                        <li class="footer-item"><a href="#home" class="footer-link">Home</a></li>
+                        <li class="footer-item"><a href="./products.html" class="footer-link">Products </a></li>
+                        <li class="footer-item"><a href="#aboutus" class="footer-link">About</a></li>
+                    
                     </ul>
                 </div>
                 <!-- footer 2nd -->
                 <div class="footer-data">
-                    <h3 class="footer-subtitle">Services</h3>
+                    <h3 class="footer-subtitle">Products</h3>
                     <ul>         
                         <li class="footer-item"><a id="downloadLink2" class="footer-link">Download Catalogue</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">Connect</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">Contact</a></li>
+                        <li class="footer-item"><a href="./products.html" 
+                           class="footer-link">Top products</a></li>
+                        <li class="footer-item"> 
                     </ul>
                 </div>
                 <!-- footer 3rd -->
                 <div class="footer-data">
                     <h3 class="footer-subtitle">Social Media</h3>
                     <ul>
-                        <li class="footer-item"><a href="#" class="footer-link">Facebook</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">Instagram</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">Whatsapp</a></li>
+                        <li class="footer-item"><a href="https://www.facebook.com/p/Anusree-Steel-Industries-100067586967107/" class="footer-link">Facebook</a></li>
+                        <li class="footer-item"><a href="https://www.instagram.com/regal_steel_industries/" class="footer-link">Instagram</a></li>
+                        <li class="footer-item"><a href="https://api.whatsapp.com/send/?phone=+918891764322&text&type=phone_number&app_absent=0" class="footer-link">Whatsapp</a></li>
                         <li class="footer-item"><a href="mailto:anusreesteel@gmail.com" class="footer-link">Mail</a></li>
                     </ul>
                 </div>
@@ -308,8 +566,8 @@ parallax -->
                     <ul>
                         <li class="footer-item"><a href="#" class="footer-link">Company</a></li>
                         <li class="footer-item"><a href="#" class="footer-link">Testimonials</a></li>
-                        <li class="footer-item"><a href="#" class="footer-link">Customer Support</a></li>
-        
+                        
+
                     </ul>
                 </div>
             </div>
@@ -435,6 +693,41 @@ setInterval(changeBackground, 3200);
     xDown = null;
     yDown = null;
   }
+
+
+  let slideIndex12 = 1;
+showSlides12(slideIndex12);
+
+// Start with showing the first slide
+function showSlides12(n) {
+    let i;
+    let slides12 = document.getElementsByClassName("slide12");
+    if (n > slides12.length) {slideIndex12 = 1}    // Wrap around if the index exceeds number of slides
+    if (n < 1) {slideIndex12 = slides12.length}   // Wrap around if the index is less than 1
+    for (i = 0; i < slides12.length; i++) {
+        slides12[i].style.display = "none";       // Hide all slides
+    }
+    slides12[slideIndex12 - 1].style.display = "block"; // Show the current slide
+}
+
+// Function to change slides
+function plusSlides12(n) {
+    showSlides12(slideIndex12 += n);
+}
+
+// Timer for auto-slide change
+let autoplayInterval = setInterval(() => {
+    plusSlides12(1);  // Move to the next slide
+}, 7000);  // Changes every 7 seconds
+
+// Reset the timer if user manually changes slides
+function resetTimer() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => {
+        plusSlides12(1);
+    }, 7000);
+}
+
       </script>
       
 </body>
