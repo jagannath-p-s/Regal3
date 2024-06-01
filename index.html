@@ -47,7 +47,9 @@
 <!-- 
 parallax -->
 <link rel="stylesheet" href="parallax.css">
+
 <style>
+
     .filters-container {
     width: 100%;
     overflow: hidden;
@@ -78,7 +80,36 @@ parallax -->
 
 </style>
 <style>
+    .video-container {
+        margin: 10px;
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        @media (min-width: 768px) {
+            .video-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .video-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+
+
+        
 .carousel-container {
   border-radius: 0px;
   overflow: hidden;
@@ -360,20 +391,20 @@ parallax -->
 
                 <div class="hallmark">
                     <h3 class="hallmark-title" style="font-size: 35px;">Quality is our Hallmark</h3>
-                    <p class="hallmark-desc">Our products are often made with high-quality materials and are designed and manufactured with attention to detail. Each product is personally tested by our staff before delivery</p>
+                    <p class="hallmark-desc" style="padding: 48px;">Our products are made with high-quality materials and are designed and manufactured with attention to detail. Each product is personally tested by our staff before delivery</p>
                 </div>
            </div>
         </section>
 
         <!--=============== STORE ===============-->
-        <section class="store" id="store" style="background-color: #f5f5f5;">
+        <section class="store" id="store" style="background-color: #f5f5f5; ">
 
             <div class="title-wrapper section container" >
                 <h1 class="store-title" > Customers</span></h1>
                 <p class="store-desc" >We deliver furniture solutions tailored for offices, auditoriums, hospitals, schools, colleges, and more. Our range includes ergonomic office chairs, desks, study pods, auditorium seating, bunker beds, and many other bulk-purchased items</p>
             </div>
 
-            <ul class="store-list">
+            <ul class="store-list" >
                 <!--1st-->
                 <li>
                     <div class="store-card has-bg-image has-after" style="background-image: url('https://i.pinimg.com/564x/e6/00/e8/e600e8f9020ff8aafd97d31c1255295e.jpg')">
@@ -398,8 +429,17 @@ parallax -->
                         </div>
                     </div>
                 </li>
-                <!--3rd-->
                 <li>
+                    <div class="store-card has-bg-image has-after" style="background-image: url('https://i.pinimg.com/564x/6e/0a/9f/6e0a9f98bc6a042b92ecbe0317b94edc.jpg')">
+                        <div class="store-content">
+                            <div>
+                           
+                                <h3 class="store-content-title">Colleges</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> --><li>
                     <div class="store-card has-bg-image has-after" style="background-image: url('https://i.pinimg.com/564x/03/67/a2/0367a21ba305099d376b5f4034866802.jpg')">
                         <div class="store-content">
                             <div>
@@ -410,18 +450,37 @@ parallax -->
                         </div>
                     </div>
                 </li>
+                <li>
+                    <div class="store-card has-bg-image has-after" style="background-image: url('https://img.freepik.com/premium-photo/empty-auditorium-with-rows-seats-before-event-starts-created-with-generative-ai_419341-34891.jpg?w=360')">
+                        <div class="store-content">
+                            <div>
+                           
+                                <h3 class="store-content-title">Auditoriums</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li><li>
+                    <div class="store-card has-bg-image has-after" style="background-image: url('https://img.freepik.com/free-photo/restaurant-tables_1162-181.jpg?t=st=1717224547~exp=1717228147~hmac=8cc8ebe3be43fda617ed5050e398ff78238798b83366ca3f9035a1fb84a684fd&w=740')">
+                        <div class="store-content">
+                            <div>
+                           
+                                <h3 class="store-content-title">Restaurants</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--3rd-->
+                
                
             </ul>
-            <div class="title-wrapper section container">
-             
-                
+        
 
         </section>
        
     
            
         <!--=============== testimonials ===============-->
-        <div id="testimony" class="contact-container swiper" style=" margin: 50px; ">
+        <div id="testimony" class="contact-container swiper" style=" margin:  0 50px;  ">
             <div class="swiper-wrapper" >
                 <article class="contact-card swiper-slide fade-in-on-scroll">
                     <i class='bx bxs-quote-left contact-theme'></i>
@@ -457,41 +516,35 @@ parallax -->
     </main>
 
     <!-- .................................................... -->
-  <div style="max-width: 800px; align-items: center; margin: auto;" id="aboutus">
+  <div style="max-width: 800px; align-items: center; margin: auto; margin-top: 30px;" id="aboutus">
     <div style="text-align: center;">
-        <h1 style="font-size: 30px;" class="store-title">About Us</h1>
+        <h1 style="font-size: 30px;" class="store-title" >About Us</h1>
     </div>
     
     <div class="mySlides animate">
-                
-        <img src="./hisimages/his1.jpg" alt="slide" />
+        <img src="./hisimages/his1.jpg" alt="slide" style="filter: sepia(100%);" />
         <div class="number">1 / 5</div>
-        
-      </div>
+    </div>
     
-      <div class="mySlides animate">
-        <img src="./hisimages/his2.jpg" alt="slide" />
+    <div class="mySlides animate">
+        <img src="./hisimages/his2.jpg" alt="slide" style="filter: sepia(100%);" />
         <div class="number">2 / 5</div>
-       
-      </div>
+    </div>
     
-      <div class="mySlides animate">
-        <img src="./hisimages/his6.jpg" alt="slide" />
+    <div class="mySlides animate">
+        <img src="./hisimages/his6.jpg" alt="slide" style="filter: sepia(100%);" />
         <div class="number">3 / 5</div>
-       
-      </div>
+    </div>
     
-      <div class="mySlides animate">
-        <img src="hisimages/his7.jpg" alt="slide" />
+    <div class="mySlides animate">
+        <img src="hisimages/his7.jpg" alt="slide" style="filter: sepia(100%);" />
         <div class="number">4 / 5</div>
-        
-      </div>
+    </div>
     
-      <div class="mySlides animate">
-        <img src="./hisimages/his4.jpg" alt="slide" />
+    <div class="mySlides animate">
+        <img src="./hisimages/his4.jpg" alt="slide" style="filter: sepia(100%);" />
         <div class="number">5 / 5</div>
-       
-      </div>
+    </div>
     
       <!-- Next and previous buttons -->
      
@@ -512,7 +565,7 @@ parallax -->
                   <div class="slideshow-container12" style="max-width: 800px; align-items: center; margin: auto;">
                       <div class="slide12 fade12">
                           <div class="text-overlay12 store-desc12" style="text-align: left; padding: 20px;">
-                              Established in 2006 by Mr. Ravindran in Changaramkulam, Kerala, Regal Industries started its humble journey with a commitment to delivering high-quality steel products at competitive prices.
+                               Regal Industries started its humble journey with a commitment to delivering high-quality steel products , Established in 2006 by Mr. Ravindran in Changaramkulam, Kerala,
                           </div>
                       </div>
                       <div class="slide12 fade12">
@@ -522,7 +575,7 @@ parallax -->
                       </div>
                       <div class="slide12 fade12">
                           <div class="text-overlay12 store-desc12" style="text-align: left; padding: 20px;">
-                              Today, under the leadership of Mr. Vishnu, Regal Steel Industries offers an extensive range of over 100 products, specializing in powder-coated items known for their durability and quality. The company provides a variety of furniture for auditoriums, banks, and educational institutions, fulfilling bulk orders throughout Kerala.
+                              Today, under the Directorship of Vishnu Ravindran , Regal Steel Industries offers an extensive range of over 100 products, specializing in powder-coated items known for their durability and quality. The company provides a variety of furniture for auditoriums, banks, and educational institutions, fulfilling bulk orders throughout Kerala.
                           </div>
                       </div>
                   </div>
@@ -534,7 +587,25 @@ parallax -->
 
               </div>
   </div>
+  
     <!--=============== FOOTER ===============-->
+    <div class="video-container">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/RRVRg2Uzr3I?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/ardpIdOkzio?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/xET3SMHPfPY?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/xfFdTLjYdqI?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <footer id="footer" class="footer section">
         <div class="footer-container container grid">
             <div class="footer-content grid">
