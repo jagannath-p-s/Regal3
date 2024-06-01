@@ -728,7 +728,7 @@ function changeBackground() {
         home.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), ' + images[currentIndex];
         currentIndex = (currentIndex + 1) % images.length; // Wrap around to the first image
         home.style.opacity = 1; // Fade in the new image
-    }, 10); // Match the timeout with the CSS transition duration
+    }, 100); // Match the timeout with the CSS transition duration
 }
 
 setInterval(changeBackground, 5000);
