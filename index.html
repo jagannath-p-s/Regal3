@@ -47,7 +47,36 @@
 <!-- 
 parallax -->
 <link rel="stylesheet" href="parallax.css">
+<style>
+    /* Add a black fade-in effect to the background */
+.home {
+  background-color: black;
+  transition: background-color 0.5s ease-in-out;
+}
 
+/* Make the content visible */
+.home-container {
+  position: relative;
+}
+
+/* Add a black overlay */
+.home-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade in the overlay when the background changes */
+.home:hover::after {
+  opacity: 0.6;
+}
+</style>
 <style>
 
     .filters-container {
@@ -130,15 +159,7 @@ parallax -->
   width: 100%;
 }
 
-/* image gradient overlay [optional] */
-/*  .mySlides::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-    background-image: linear-gradient(-45deg, rgba(110, 0, 255, .1), rgba(70, 0, 255, .2));
-} */
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -279,6 +300,28 @@ parallax -->
     to {opacity: 1}
 }
 
+</style>
+<style>
+    .home {
+        background-image: url(./image1.webp);
+        background-color: black;
+        animation: changeBackground 12s infinite;
+    }
+
+    @keyframes changeBackground {
+        0% {
+            background-image: url(./image1.webp);
+        }
+        33% {
+            background-image: url(./image2.webp);
+        }
+        66% {
+            background-image: url(./image3.webp);
+        }
+        100% {
+            background-image: url(./image1.webp);
+        }
+    }
 </style>
 
 </head>
@@ -755,21 +798,6 @@ document.getElementById("downloadLink").addEventListener("click", function(event
 
 
 
-var images = ['url(/image1.webp)', 'url(/image2.webp)', 'url(/image3.webp)'];
-var currentIndex = 0;
-var home = document.querySelector('.home');
-
-function changeBackground() {
-    // Change the backgroundImage with a fade effect
-    home.style.opacity = 0; // Set the opacity to 0 to fade out
-    setTimeout(function() {
-        home.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), ' + images[currentIndex];
-        currentIndex = (currentIndex + 1) % images.length; // Wrap around to the first image
-        home.style.opacity = 1; // Fade in the new image
-    }, 100); // Match the timeout with the CSS transition duration
-}
-
-setInterval(changeBackground, 5000);
 
        
           function hideMenu() {
