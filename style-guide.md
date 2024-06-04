@@ -1,74 +1,12 @@
-# Essentials
+Yes domain can be transferrd to our platform, you will have to share the login details to the service provider from who you purchased the domain ( for eg. Godaddy ) , we will be doing the domain transfer as well within the package itself , 
 
-## Html import links
 
-Google font
+we be using your guidelines to build the site and assure a beautiful and fully functional website and amendements are acceptable upto a certain extent , after the site is finalised , any additional changes will be charged
 
-``` html
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-```
+our services comes with one year maintance as well to ensure the that the site is usable active and maintain security standards as well , 
 
-Boxicons
+for the hosting
+I personally recommend you chose a standard hosting like that of aws , there are two benefits 
 
-``` html
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-```
+you will get fast and free hosting service for one year, you can also migrate to a another service anytime , you will also get a ssl certificate for free  
 
----
-
-## Colors
-
-``` css
-  --grey-clr: hsl(0, 10%, 94%);
-  --grey-clr-alt: hsl(228, 3%, 33%);
-  --grey-clr-light: hsl(240, 2%, 81%);
-  --grey-clr-dark: hsl(0, 0%, 13%);
-  --black-clr: hsl(240,3%,7%);
-  --white-clr: hsl(0, 0%, 100%);
-  --footer-clr: hsl(0, 0%, 50%);
-  --product-clr: hsla(0, 0%, 20%, 1);
-```
-
-## Gradient color
-
-``` css
-  --linear-gradient: linear-gradient(to left, transparent, hsl(0, 0%, 50%), transparent);
-```
-
-## Typography
-
-``` css
-  --body-font: 'Inter', sans-serif;
-    
-  font size for mobile
-  --biggest-fs: 2.25rem;
-  --h1-fs: 1.5rem;
-  --h2-fs: 1.25rem;
-  --h3-fs: 1rem;
-  --normal-fs: 0.938rem;
-  --small-fs: 0.813rem;
-  --smaller-fs: 0.75rem;
-
-  font size for desktop
-  --biggest-fs: 4rem;
-  --h1-fs: 2.25rem;
-  --h2-fs: 1.5rem;
-  --h3-fs: 1.25rem;
-  --normal-fs: 1rem;
-  --small-fs: 0.875rem;
-  --smaller-fs: 0.813rem;
-
-  font weight
-  --regular-fw: 300;
-  --medium-fw: 500;
-  --bold-fw: 700;
-```
-
-## Z-index
-
-``` css
-  --z-tooltip: 10;
-  --z-fixed: 100;
-```
