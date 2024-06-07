@@ -49,6 +49,10 @@ parallax -->
 <link rel="stylesheet" href="parallax.css">
 <style>
     /* Add a black fade-in effect to the background */
+    *{
+        margin: 0;
+        padding: 0;
+    }
 .home {
   background-color: black;
   transition: background-color 0.5s ease-in-out;
@@ -301,31 +305,42 @@ parallax -->
 }
 
 </style>
+
+    
 <style>
 .home {
+    width: 100%;
     background-color: black;
-    background-image: url(./image1.webp);
-    animation: changeBackground 12s infinite;
+    animation: changeBackground 18s infinite;
+    position: relative;
+    z-index: 1;
 }
 
-    @keyframes changeBackground {
-        0% {
-            background-image: url(./image1.webp);
-           
-        }
-        33% {
-            background-image: url(./image2.webp);
-           
-        }
-        66% {
-            background-image: url(./image3.webp);
-            
-        }
-        100% {
-            background-image: url(./image1.webp);
-           
-        }
-    }
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex a {
+    font-size: 1.5em; /* Increase icon size */
+    margin: 5px; /* Add more margin */
+    color: white; /* Adjust icon color if needed */
+}
+
 </style>
 
 </head>
@@ -338,17 +353,14 @@ parallax -->
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./products.html" class="nav-link" id="company">Products</a></li>
+                    
                     <li class="nav-item"><a href="#aboutus" class="nav-link">About us </a></li>
                     <li class="nav-item"><a href="#testimony" class="nav-link">Testimonials </a></li>
                 </ul>
                 <div class="nav-close" id="nav-close"><i class="bx bx-x"></i></div>
                 <div class="nav-close movdown" id="nav-close"><i class="bx "></i></div>
                 <div class="nav__dark">
-                    <a href="https://api.whatsapp.com/send/?phone=+918891764322&text&type=phone_number&app_absent=0" class='bx bxl-whatsapp change-theme'></a>
-                    <a href="https://www.facebook.com/p/Anusree-Steel-Industries-100067586967107/" class='bx bxl-facebook change-theme'></a>
-                    <a href="https://www.instagram.com/regal_steel_industries/" class='bx bxl-instagram change-theme'></a>
-                    <a href="tel:phonenumber" class="bx bx-phone change-theme"></a>
-
+                    
                    
                     
                 </div>
@@ -363,12 +375,20 @@ parallax -->
         <!--=============== HERO ===============-->
         <section class="home section" id="home" style="background-image: url(./image3.webp) ; background-color: black;  ">
             <div class="home-container container" style="margin-top: 70px; margin: 30px;">
-                <h1 class="home-title" >Regal Industries </h1><h3 style="color: rgb(187, 187, 187); margin-bottom: 10px;"> Quality | Affordability | Craftsmanship</h3>
+                <h1 class="home-title" >Regal Industries </h1><h3 style="color: rgb(255, 255, 255); margin-bottom: 10px;"> Quality | Affordability | Craftsmanship</h3>
                 <div class="home-icons">
                     <p class="home-desc" style=" text-align: left;">
                         Find various types of home , office and business products. Connect with us and  order the best products of your choice , we are the best furniture manufactures and wholesalers in kerala with all India delivery for bulk orders</p>
-                        <a id="downloadLink" style="text-decoration: none; color: aliceblue; margin-top: 50px; " href="#collection">Download Catalogue<i class='bx bx-download change-theme home-theme' style="margin: 10px;"></i></a>
-
+                        <div class="flex " style="z-index: 999; margin: 10px;">
+                     <a href="https://api.whatsapp.com/send/?phone=+918891764322&text&type=phone_number&app_absent=0" class='bx bxl-whatsapp change-theme'></a>
+                    <a href="https://www.facebook.com/p/Anusree-Steel-Industries-100067586967107/" class='bx bxl-facebook change-theme'></a>
+                    <a href="https://www.instagram.com/regal_steel_industries/" class='bx bxl-instagram change-theme'></a>
+                    <a href="tel:phonenumber" class="bx bx-phone change-theme"></a>
+                    <a id="DownloadLink" class='bx bx-download change-theme ' ></a>
+                    
+                        </div>
+                        
+                      
                 </div>
             </div>
         </section>
@@ -700,6 +720,7 @@ parallax -->
                     <ul>         
                         <li class="footer-item"><a href="#home" class="footer-link">Home</a></li>
                         <li class="footer-item"><a href="./products.html" class="footer-link">Products </a></li>
+                        
                         <li class="footer-item"><a href="#aboutus" class="footer-link">About</a></li>
                     
                     </ul>
@@ -709,6 +730,7 @@ parallax -->
                     <h3 class="footer-subtitle">Products</h3>
                     <ul>         
                         <li class="footer-item"><a id="downloadLink2" class="footer-link">Download Catalogue</a></li>
+                    
                         <li class="footer-item"><a href="./products.html" 
                            class="footer-link">Top products</a></li>
                         <li class="footer-item"> 
@@ -754,99 +776,26 @@ parallax -->
     <script src="parallax.js"></script>    <script>
 
 
+function downloadCatalogue() {
+    const link = document.createElement("a");
+    link.href = "./regal_catalogue.pdf";
+    link.download = "regal_catalogue.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+document.getElementById("DownloadLink").addEventListener("click", function(event) {
+    event.preventDefault();
+    downloadCatalogue();
+});
+
 document.getElementById("downloadLink2").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default action of the link
-
-    // Create an anchor element
-    var link = document.createElement("a");
-    link.href = "./regal_catalogue.pdf"; // Provide the path to your PDF file
-    link.download = "regal_catalogue.pdf"; // Specify the filename for the downloaded file
-
-    // Append the anchor element to the body
-    document.body.appendChild(link);
-
-    // Trigger a click event on the anchor element
-    link.click();
-
-    // Remove the anchor element from the body
-    document.body.removeChild(link);
+    event.preventDefault();
+    downloadCatalogue();
 });
 
 
-
-
-
-
-
-
-
-
-document.getElementById("downloadLink").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default action of the link
-
-    // Create an anchor element
-    var link = document.createElement("a");
-    link.href = "./regal_catalogue.pdf"; // Provide the path to your PDF file
-    link.download = "regal_catalogue.pdf"; // Specify the filename for the downloaded file
-
-    // Append the anchor element to the body
-    document.body.appendChild(link);
-
-    // Trigger a click event on the anchor element
-    link.click();
-
-    // Remove the anchor element from the body
-    document.body.removeChild(link);
-});
-
-
-
-
-
-       
-          function hideMenu() {
-    var navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.remove('show-menu');
-  }
-
-  // For swipe gesture handling
-  var xDown = null;
-  var yDown = null;
-
-  function handleTouchStart(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
-  }
-
-  function handleTouchMove(evt) {
-    if (!xDown || !yDown) {
-      return;
-    }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-      if (xDiff > 0) {
-        /* right swipe */
-        hideMenu();
-      } else {
-        /* left swipe */
-      }
-    } else {
-      if (yDiff > 0) {
-        /* down swipe */
-      } else {
-        /* up swipe */
-      }
-    }
-    /* reset values */
-    xDown = null;
-    yDown = null;
-  }
 
 
   let slideIndex12 = 1;

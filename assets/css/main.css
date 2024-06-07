@@ -53,10 +53,12 @@
 }
 
 html{
+    width: 100%;
     scroll-behavior: smooth;
 }
 
 body{
+    width: 100%;
     font-family: var(--body-font);
     font-size: var(--normal-fs);
     background-color: var(--grey-clr);
@@ -298,6 +300,7 @@ input{
     align-items: center;
     flex-direction: column;
     gap: 1.5rem;
+   
 }
 
 .home-theme{
