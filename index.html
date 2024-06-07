@@ -309,9 +309,8 @@ parallax -->
     
 <style>
 .home {
-    width: 100%;
     background-color: black;
-    animation: changeBackground 18s infinite;
+    animation: changeBackground 12s infinite;
     position: relative;
     z-index: 1;
 }
@@ -327,15 +326,34 @@ parallax -->
     z-index: -1;
 }
 
+@keyframes changeBackground {
+    0% {
+        background-image: url(./image1.jpg);
+        background-size: cover;
+    }
+    33% {
+        background-image: url(./image2.jpg);
+        background-size: cover;
+    }
+    66% {
+        background-image: url(./image1.jpg);
+        background-size: cover;
+    }
+    100% {
+        background-image: url(./image2.jpg);
+        background-size: cover;
+    }
+}
 
-.flex {
+
+.flex1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.flex a {
+.flex1 a {
     font-size: 1.5em; /* Increase icon size */
     margin: 5px; /* Add more margin */
     color: white; /* Adjust icon color if needed */
@@ -346,28 +364,50 @@ parallax -->
 </head>
 <body>
     <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" style="font-family: 'Poppins', sans-serif;  letter-spacing: -0.5px;" class="nav-logo"><img src="./logo.png" class="nav-logo-img">Regal</a>
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="./products.html" class="nav-link" id="company">Products</a></li>
-                    
-                    <li class="nav-item"><a href="#aboutus" class="nav-link">About us </a></li>
-                    <li class="nav-item"><a href="#testimony" class="nav-link">Testimonials </a></li>
-                </ul>
-                <div class="nav-close" id="nav-close"><i class="bx bx-x"></i></div>
-                <div class="nav-close movdown" id="nav-close"><i class="bx "></i></div>
-                <div class="nav__dark">
-                    
-                   
-                    
-                </div>
-            </div>
-            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-align-right'></i></div>
-        </nav>
-    </header>
+<!--=============== HEADER ===============-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#home" style="font-family: 'Poppins', sans-serif;  letter-spacing: -0.5px;" class="nav-logo"><img src="./logo.png" class="nav-logo-img">Regal</a>
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./products.html" class="nav-link" id="company">Products</a></li>
+                <li class="nav-item"><a href="#aboutus" class="nav-link">About us </a></li>
+                <li class="nav-item"><a href="#testimony" class="nav-link">Testimonials </a></li>
+            </ul>
+            <div class="nav-close" id="nav-close"><i class="bx bx-x"></i></div>
+            <div class="nav-close movdown" id="nav-close"><i class="bx "></i></div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle"><i class='bx bx-align-right'></i></div>
+    </nav>
+</header>
+<script>// Select the necessary elements
+    const header = document.querySelector('.header');
+    const navMenu = document.querySelector('.nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    // Function to show the nav menu
+    function showNavMenu() {
+      navMenu.classList.add('show-menu');
+    }
+    
+    // Function to hide the nav menu
+    function hideNavMenu() {
+      navMenu.classList.remove('show-menu');
+    }
+    
+    // Event listener for the nav toggle button
+    navToggle.addEventListener('click', showNavMenu);
+    
+    // Event listener for clicks outside the header and nav menu
+    document.addEventListener('click', function(event) {
+      const isClickInside = header.contains(event.target) || navMenu.contains(event.target);
+    
+      if (!isClickInside) {
+        hideNavMenu();
+      }
+    });</script>
+    
 
     <!--=============== MAIN ===============-->
     <main class="main">
@@ -379,7 +419,7 @@ parallax -->
                 <div class="home-icons">
                     <p class="home-desc" style=" text-align: left;">
                         Find various types of home , office and business products. Connect with us and  order the best products of your choice , we are the best furniture manufactures and wholesalers in kerala with all India delivery for bulk orders</p>
-                        <div class="flex " style="z-index: 999; margin: 10px;">
+                        <div class="flex1 " style="z-index: 999; margin: 10px;">
                      <a href="https://api.whatsapp.com/send/?phone=+918891764322&text&type=phone_number&app_absent=0" class='bx bxl-whatsapp change-theme'></a>
                     <a href="https://www.facebook.com/p/Anusree-Steel-Industries-100067586967107/" class='bx bxl-facebook change-theme'></a>
                     <a href="https://www.instagram.com/regal_steel_industries/" class='bx bxl-instagram change-theme'></a>
@@ -398,7 +438,7 @@ parallax -->
             <div class="collection-container container">
 
                 <div class="collection-data">
-                    <h1 class="collection-title" style="margin-bottom: 27px;">Why should <span class="span">you choose our productS ?</span></h1>
+                    <h1 class="collection-title" style="margin-left:40px; margin-bottom: 27px;">Why should <span class="span">you choose our products ?</span></h1>
                 </div>
                 
                 <ul class="collection-list grid">
@@ -830,6 +870,7 @@ function resetTimer() {
         plusSlides12(1);
     }, 7000);
 }
+
 
       </script>
       
